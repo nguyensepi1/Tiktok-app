@@ -11,7 +11,7 @@ function Button({
     children,
     primary = false,
     outline = false,
-    disable = false,
+    disabled = false,
     text = false,
     small = false,
     large = false,
@@ -25,7 +25,7 @@ function Button({
         ...anotherProp,
     };
 
-    if (disable) {
+    if (disabled) {
         delete prop.onClick;
     }
 
@@ -43,7 +43,7 @@ function Button({
                 text,
                 primary,
                 outline,
-                disable,
+                disabled,
                 text,
                 small,
                 large,

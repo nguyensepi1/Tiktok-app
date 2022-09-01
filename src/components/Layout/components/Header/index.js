@@ -62,7 +62,8 @@ function Header() {
                         <FontAwesomeIcon className={cx('btn-icon')} icon={faPlus}/>
                         <span>Upload</span>
                     </Button>
-                    <Button primary onClick={() => alert('')}>Login</Button>
+                    <Button primary to='/profile'>Profile</Button>
+                    <Button primary to='/following'>Following</Button>
                 </div>
             </div>
         </header>
