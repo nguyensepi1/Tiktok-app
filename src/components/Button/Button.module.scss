@@ -1,0 +1,59 @@
+.wrapper {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    min-width: 100px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    &.disable {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}
+
+// Button type
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        background-color: #fe2c550f;
+    }
+}
+
+.text {
+    &:hover {
+        border-color: #ddd;
+    }
+}
+
+
+// Button size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 148px;
+    padding: 12px 16px;
+}

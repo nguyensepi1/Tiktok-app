@@ -1,0 +1,103 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-btn-width: 52px;
+    --search-height: 46px;
+    --split-height: 28px;
+
+    width: 100%;
+    height: var(--default-layout-header-height);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    height: 100%;
+    width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+}
+
+.search, .search-result {
+    width: 361px;
+}
+
+.search {
+    height: var(--search-height);
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: var(--search-border-radius);
+    padding-left: 16px;
+    display: flex;
+    position: relative;
+    border: 1.5px solid transparent;
+
+    input {
+        flex: 1;
+        padding: 12px 0;
+        color: var(--black);
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        background-color: transparent;
+        caret-color: var(--primary);        
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.85);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: var(--split-height);
+        width: 1px;
+        top: calc((var(--search-height) - var(--split-height)) / 2);
+        right: var(--search-btn-width);
+        background-color: rgba(22, 24, 35, 0.25);
+    }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.search-result {
+}
+
+.search-title {
+    padding: 5px 12px;
+    color: var(--text-color-80);
+    font-weight: 500;
+}
+
+.close-btn, .loading {
+    color: rgba(22, 24, 35, 0.34);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(var(--search-btn-width) + 16px);
+}
+
+.search-btn {
+    width: var(--search-btn-width);
+    height: 100%;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.65);
+    cursor: pointer;
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+
+    &:hover {
+        color: rgba(22, 24, 35, 0.85);
+    }
+}
+
+
+// Action
+.btn-icon {
+    margin-right: 6px;
+    font-size: 1.8rem;
+}
